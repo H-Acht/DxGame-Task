@@ -24,7 +24,11 @@ void player::update()
 	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
 	if (padState & PAD_INPUT_2)
 	{
-		m_pos.x 
+		if (padState & PAD_INPUT_2)
+		{
+			m_pos.x += 0.1f;
+
+		}
 	}
 
 }
