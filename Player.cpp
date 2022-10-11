@@ -20,8 +20,8 @@ void player::init()
 {
 	m_pos.x = 100.0f;
 	m_pos.y = 100.0f;
-	m_vec.x = 0.0f;
-	m_vec.y = 0.0f;
+	m_vec.x = 5.0f;
+	m_vec.y = 5.0f;
 }
 
 void player::update()

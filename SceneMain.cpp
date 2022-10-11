@@ -2,7 +2,6 @@
 
 #include "SceneMain.h"
 #include "SceneTitle.h"
-#include "SceneTest.h"
 
 #include "player.h"
 
@@ -28,11 +27,6 @@ SceneBase* SceneMain::update()
 	}*/
 
 	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
-	
-	player player;
-	player.init();
-	player.update();
-	player.draw();
 
 	if (padState & PAD_INPUT_2)
 	{
