@@ -11,7 +11,6 @@ public:
 	}
 	virtual ~SceneMain() {}
 
-
 	virtual void init() override;
 	virtual void end() override {}
 

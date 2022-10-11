@@ -12,7 +12,6 @@ public:
 	}
 	virtual ~SceneTitle() {}
 
-
 	virtual void init() override;
 	virtual void end() override {}
 

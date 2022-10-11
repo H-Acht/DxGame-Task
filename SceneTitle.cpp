@@ -16,9 +16,9 @@ SceneBase* SceneTitle::update()
 {
 	
 	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
-	if (padState & PAD_INPUT_DOWN)
+	if (padState & PAD_INPUT_1)
 	{
-		
+		return (new SceneMain);
 	}
 	
 	return this;
@@ -27,4 +27,7 @@ SceneBase* SceneTitle::update()
 void SceneTitle::draw()
 {
 	DrawString(m_textPosX, m_textPosY, "ƒ^ƒCƒgƒ‹‰æ–Ê", GetColor(255, 255, 255));
+	
+	DrawString(m_textPosX, m_textPosY +60, "Pless Z Key", GetColor(255, 255, 255));
+
 }

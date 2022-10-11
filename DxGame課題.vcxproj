@@ -148,7 +148,6 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SceneBase.cpp" />
-    <ClCompile Include="SceneGame.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneManaer.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
@@ -158,7 +157,6 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="SceneBase.h" />
-    <ClInclude Include="SceneGame.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SceneTitle.h" />

@@ -8,7 +8,7 @@
 void SceneMain::init()
 {
 	m_textPosX = 0;
-	m_textVecX = 4;
+
 }
 
 SceneBase* SceneMain::update()
@@ -28,6 +28,7 @@ SceneBase* SceneMain::update()
 
 	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
 
+
 	if (padState & PAD_INPUT_2)
 	{
 		//PlaySoundFile("sound/cursor1.mp3", DX_PLAYTYPE_NORMAL);
@@ -37,14 +38,13 @@ SceneBase* SceneMain::update()
 		return (new SceneTitle);
 	}
 
+	player player;
+	player.update();
 
 	return this;
-
-	
-
 }
 
 void SceneMain::draw()
 {
-	DrawString(m_textPosX, 0, "ÉÅÉCÉìâÊñ ", GetColor(255, 255, 255));
+	DrawString(m_textPosX, 0, "play", GetColor(255, 255, 255));
 }
