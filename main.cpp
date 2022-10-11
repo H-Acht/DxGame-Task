@@ -2,44 +2,62 @@
 
 #include "game.h"
 
-//プログラムはWin Mainから始まります
+#include "SceneManager.h"
+#include "player.h"
+
+// プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-    //windowモード設定
-    ChangeWindowMode(Game::kWindowMode);
-    //ウィンドウ名設定
-    SetMainWindowText(Game::kTitleText);
-    //画面サイズの設定
-    SetGraphMode(1280, 720, 32);
+	// windowモード設定
+	ChangeWindowMode(Game::kWindowMode);
+	// ウインドウ名設定
+	SetMainWindowText(Game::kTitleText);
+	// 画面サイズの設定
+	SetGraphMode(Game::kScreenWidth, Game::kScreenHeight, Game::kColorDepth);
 
-    if (DxLib_Init() == -1)        // ＤＸライブラリ初期化処理
-    {
-        return -1;        // エラーが起きたら直ちに終了
-    }
+	if (DxLib_Init() == -1)		// ＤＸライブラリ初期化処理
+	{
+		return -1;			// エラーが起きたら直ちに終了
+	}
 
-    //ダブルバッファモード
-    SetDrawScreen(DX_SCREEN_BACK);
+	// ダブルバッファモード
+	SetDrawScreen(DX_SCREEN_BACK);
 
-    while (ProcessMessage() == 0)
-    {
-        LONGLONG time = GetNowHiPerformanceCount();
+	// 最初のシーンの初期化
+	SceneManager scene;
+	scene.init();
 
-        //画面のクリア
-        ClearDrawScreen();
 
-        //裏画面と表画面を切り替える
-        ScreenFlip();
+	player player;
+	//player.init();
+	player.update();
 
-        //escキーで終了
-        if (CheckHitKey(KEY_INPUT_ESCAPE))   break;
+	while (ProcessMessage() == 0)
+	{
+		LONGLONG  time = GetNowHiPerformanceCount();
+		// 画面のクリア
+		ClearDrawScreen();
 
-        //fpsを60に固定
-        while (GetNowHiPerformanceCount() - time < 16667)
-        {
-        }
-    }
+		scene.update();
+		scene.draw();
 
-    DxLib_End();            // ＤＸライブラリ使用の終了処理
+		
 
-    return 0;            // ソフトの終了
+		//裏画面を表画面を入れ替える
+		ScreenFlip();
+
+		// escキーを押したら終了する
+		if (CheckHitKey(KEY_INPUT_ESCAPE))	break;
+
+		// fpsを60に固定
+		while (GetNowHiPerformanceCount() - time < 16667)
+		{
+		}
+	}
+
+	scene.end();
+
+	DxLib_End();				// ＤＸライブラリ使用の終了処理
+
+	return 0;				// ソフトの終了 
 }
