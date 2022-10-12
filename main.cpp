@@ -27,9 +27,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	SceneManager scene;
 	scene.init();
 
+	player player;
+	player.init();
 
-	//player player;
-	//player.init();
+
+	
 
 	while (ProcessMessage() == 0)
 	{
@@ -37,11 +39,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		// ‰æ–Ê‚ÌƒNƒŠƒA
 		ClearDrawScreen();
 
-		//player.update();
-		//player.draw();
-
 		scene.update();
 		scene.draw();
+		
+		player.update();
+		player.draw();
 		
 		//— ‰æ–Ê‚ð•\‰æ–Ê‚ð“ü‚ê‘Ö‚¦‚é
 		ScreenFlip();

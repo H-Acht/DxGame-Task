@@ -1,5 +1,6 @@
 #include "player.h"
 #include "DxLib.h"
+#include "game.h"
 
 player::player()
 {
@@ -14,7 +15,7 @@ player::~player()
 void player::init()
 {
 	m_pos.x = 100.0f;
-	m_pos.y = 100.0f;
+	m_pos.y = Game::kScreenHeight / 2;
 }
 
 void player::update()
