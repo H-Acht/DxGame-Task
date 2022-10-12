@@ -26,6 +26,11 @@ SceneBase* SceneMain::update()
 		m_textVecX = -4;
 	}*/
 
+	player player;
+	player.init();
+	player.update();
+	player.draw();
+
 	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
 
 
@@ -37,9 +42,6 @@ SceneBase* SceneMain::update()
 	{
 		return (new SceneTitle);
 	}
-
-	player player;
-	player.update();
 
 	return this;
 }
