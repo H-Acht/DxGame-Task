@@ -26,8 +26,12 @@ SceneBase* SceneTitle::update()
 
 void SceneTitle::draw()
 {
-	DrawString(m_textPosX, m_textPosY, "ƒ^ƒCƒgƒ‹‰æ–Ê", GetColor(255, 255, 255));
+	SetFontSize(64);
+
+	DrawString(m_textPosX-110, m_textPosY-100, "R E N D A", GetColor(255, 255, 255));
 	
-	DrawString(m_textPosX, m_textPosY +60, "Pless Z Key", GetColor(255, 255, 255));
+	SetFontSize(32);
+
+	DrawString(m_textPosX-63, m_textPosY +10, "Pless Z Key", GetColor(255, 255, 255));
 
 }
