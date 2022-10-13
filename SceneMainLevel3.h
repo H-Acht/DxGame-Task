@@ -2,11 +2,11 @@
 #include "SceneBase.h"
 #include "Vec2.h"
 
-class SceneMainLevel1 : public SceneBase
+class SceneMainLevel3 : public SceneBase
 {
 public:
-	SceneMainLevel1() {}
-	virtual ~SceneMainLevel1() {}
+	SceneMainLevel3() {}
+	virtual ~SceneMainLevel3() {}
 
 	virtual void init() override;
 	virtual void end() override {}

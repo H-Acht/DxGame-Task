@@ -1,6 +1,6 @@
 #include "DxLib.h"
 
-#include "SceneMainLevel1.h"
+#include "SceneMainLevel3.h"
 #include "SceneTitle.h"
 #include "SceneClear.h"
 #include "SceneFail.h"
@@ -8,7 +8,7 @@
 #include "game.h"
 
 
-void SceneMainLevel1::init()
+void SceneMainLevel3::init()
 {
 	m_pos.x = 100.0f;
 	m_pos.y = Game::kScreenHeight / 2;
@@ -20,21 +20,13 @@ void SceneMainLevel1::init()
 	GoalLineY = 0;
 }
 
-SceneBase* SceneMainLevel1::update()
-{	
+SceneBase* SceneMainLevel3::update()
+{
 	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
 
 	static int push = 0;
 
-	if (padState & PAD_INPUT_1) 
-	{
-		if (push == 0) 
-		{
-			m_pos.x += 5.0f;
-		}
-		push = 1;
-	}
-	else if(padState & PAD_INPUT_2)
+	if (padState & PAD_INPUT_1)
 	{
 		if (push == 0)
 		{
@@ -42,7 +34,15 @@ SceneBase* SceneMainLevel1::update()
 		}
 		push = 1;
 	}
-	else 
+	else if (padState & PAD_INPUT_2)
+	{
+		if (push == 0)
+		{
+			m_pos.x += 5.0f;
+		}
+		push = 1;
+	}
+	else
 	{
 		push = 0;
 	}
@@ -59,7 +59,7 @@ SceneBase* SceneMainLevel1::update()
 
 	void enemy();
 	{
-		m_ePos.x += 0.3f;
+		m_ePos.x += 0.8f;
 
 		if (m_ePos.x >= GoalLineX)
 		{
@@ -70,9 +70,9 @@ SceneBase* SceneMainLevel1::update()
 	return this;
 }
 
-void SceneMainLevel1::draw()
+void SceneMainLevel3::draw()
 {
-	DrawString(0, 0, "ƒŒƒxƒ‹1", GetColor(255, 255, 255));
+	DrawString(0, 0, "ƒŒƒxƒ‹3", GetColor(255, 255, 255));
 	DrawCircle(m_pos.x, m_pos.y, 20, GetColor(255, 0, 0), true);
 	DrawCircle(m_ePos.x, m_ePos.y, 20, GetColor(0, 0, 255), true);
 	DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 255, 0), 20);
