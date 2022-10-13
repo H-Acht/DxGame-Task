@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneBase.cpp" />
+    <ClCompile Include="SceneGoal.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneManaer.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
@@ -155,6 +156,7 @@
   <ItemGroup>
     <ClInclude Include="game.h" />
     <ClInclude Include="SceneBase.h" />
+    <ClInclude Include="SceneGoal.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SceneTitle.h" />
