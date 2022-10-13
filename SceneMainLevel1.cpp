@@ -11,7 +11,7 @@
 void SceneMainLevel1::init()
 {
 	m_pos.x = 100.0f;
-	m_pos.y = Game::kScreenHeight / 2;
+	m_pos.y = 160.0f;
 
 	m_ePos.x = 100.0f;
 	m_ePos.y = 380.0f;
@@ -73,7 +73,7 @@ SceneBase* SceneMainLevel1::update()
 void SceneMainLevel1::draw()
 {
 	DrawString(0, 0, "ƒŒƒxƒ‹1", GetColor(255, 255, 255));
-	DrawCircle(m_pos.x, m_pos.y, 20, GetColor(255, 0, 0), true);
-	DrawCircle(m_ePos.x, m_ePos.y, 20, GetColor(0, 0, 255), true);
-	DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 255, 0), 20);
+	DrawCircle(m_pos.x, m_pos.y, 20, GetColor(255, 255, 0), true);
+	DrawCircle(m_ePos.x, m_ePos.y, 20, GetColor(255, 0, 0), true);
+	DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
 }
