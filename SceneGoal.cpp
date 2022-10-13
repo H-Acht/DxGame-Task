@@ -5,7 +5,7 @@
 
 void SceneGoal::init()
 {
-	m_textPosX = 280;
+	m_textPosX = 140;
 	m_textPosY = 220;
 
 }
