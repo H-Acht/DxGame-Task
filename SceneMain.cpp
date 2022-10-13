@@ -45,5 +45,5 @@ void SceneMain::draw()
 	DrawString(m_textPosX, 0, "play", GetColor(255, 255, 255));
 	DrawCircle(m_pos.x, m_pos.y, 20, GetColor(255, 255, 255), true);
 	
-
+	//
 }
