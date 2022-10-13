@@ -2,8 +2,8 @@
 
 #include "game.h"
 #include "SceneTitle.h"
-#include "SceneMainLevel1.h"
 #include "SceneRule.h"
+
 
 void SceneTitle::init()
 {
@@ -17,10 +17,7 @@ SceneBase* SceneTitle::update()
 {
 	
 	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
-	if (padState & PAD_INPUT_1)
-	{
-		return (new SceneMain);
-	}
+
 	if (padState & PAD_INPUT_UP)
 	{
 		return (new SceneRule);
@@ -37,6 +34,6 @@ void SceneTitle::draw()
 	
 	SetFontSize(32);
 
-	DrawString(m_textPosX-63, m_textPosY +10, "Pless Z Key or A", GetColor(255, 255, 255));
+	DrawString(m_textPosX-70, m_textPosY +10, "Pless UP Key", GetColor(255, 255, 255));
 
 }
