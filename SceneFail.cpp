@@ -24,6 +24,6 @@ SceneBase* SceneFail::update()
 
 void SceneFail::draw()
 {
-	DrawString(m_textPosX + 50, m_textPosY - 100, "Fail...", GetColor(255, 255, 255));
-	DrawString(m_textPosX, m_textPosY, "Pless C to Back to Title", GetColor(255, 255, 255));
+	DrawString(m_textPosX + 130, m_textPosY - 100, "Fail...", GetColor(255, 255, 255));
+	DrawString(m_textPosX-30, m_textPosY, "Pless C to Back to Title", GetColor(255, 255, 255));
 }
