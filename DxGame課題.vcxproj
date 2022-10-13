@@ -147,18 +147,22 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneBase.cpp" />
-    <ClCompile Include="SceneGoal.cpp" />
-    <ClCompile Include="SceneMain.cpp" />
+    <ClCompile Include="SceneClear.cpp" />
+    <ClCompile Include="SceneFail.cpp" />
+    <ClCompile Include="SceneMainLevel1.cpp" />
     <ClCompile Include="SceneManaer.cpp" />
+    <ClCompile Include="SceneRule.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="Vec2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h" />
     <ClInclude Include="SceneBase.h" />
-    <ClInclude Include="SceneGoal.h" />
-    <ClInclude Include="SceneMain.h" />
+    <ClInclude Include="SceneClear.h" />
+    <ClInclude Include="SceneFail.h" />
+    <ClInclude Include="SceneMainLevel1.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="SceneRule.h" />
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="Vec2.h" />
   </ItemGroup>
