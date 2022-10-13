@@ -1,8 +1,10 @@
 #include "DxLib.h"
 
-#include "SceneMain.h"
+#include "SceneMainLevel1.h"
 #include "SceneTitle.h"
-#include "SceneGoal.h"
+#include "SceneClear.h"
+#include "SceneFail.h"
+
 #include "game.h"
 
 
@@ -11,6 +13,10 @@ void SceneMain::init()
 	m_textPosX = 0;
 	m_pos.x = 100.0f;
 	m_pos.y = Game::kScreenHeight / 2;
+
+	m_ePos.x = 100.0f;
+	m_ePos.y = 380.0f;
+
 }
 
 SceneBase* SceneMain::update()
@@ -19,11 +25,19 @@ SceneBase* SceneMain::update()
 
 	static int push = 0;
 
-	if (padState & PAD_INPUT_2) 
+	if (padState & PAD_INPUT_1) 
 	{
 		if (push == 0) 
 		{
-			m_pos.x += 50.0f;
+			m_pos.x += 5.0f;
+		}
+		push = 1;
+	}
+	else if(padState & PAD_INPUT_2)
+	{
+		if (push == 0)
+		{
+			m_pos.x += 5.0f;
 		}
 		push = 1;
 	}
@@ -39,10 +53,17 @@ SceneBase* SceneMain::update()
 
 	if (m_pos.x >= 600)
 	{
-		return (new SceneGoal);
+		return (new SceneClear);
 	}
 
-	
+	void enemy();
+	{
+		m_ePos.x += 0.5;
+		if (m_ePos.x >= 600)
+		{
+			return(new SceneFail);
+		}
+	}
 
 	return this;
 }
@@ -50,6 +71,7 @@ SceneBase* SceneMain::update()
 void SceneMain::draw()
 {
 	DrawString(m_textPosX, 0, "play", GetColor(255, 255, 255));
-	DrawCircle(m_pos.x, m_pos.y, 20, GetColor(255, 255, 255), true);
+	DrawCircle(m_pos.x, m_pos.y, 20, GetColor(255, 0, 0), true);
+	DrawCircle(m_ePos.x, m_ePos.y, 20, GetColor(0, 0, 255), true);
 	DrawLine(600, 0, 600, 480, GetColor(255, 255, 0), 20);
 }

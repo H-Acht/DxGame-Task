@@ -23,4 +23,6 @@ private:
 	int m_textVecX;
 
 	Vec2 m_pos;
+	Vec2 m_ePos;
+
 };
