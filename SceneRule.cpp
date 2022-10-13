@@ -34,6 +34,7 @@ SceneBase* SceneRule::update()
 	}
 
 	return this;
+
 }
 
 void SceneRule::draw()
@@ -44,4 +45,5 @@ void SceneRule::draw()
 	DrawString(m_textPosX + 30, m_textPosY, "ƒŒƒxƒ‹1:<©>", GetColor(255, 255, 255));
 	DrawString(m_textPosX + 30, m_textPosY + 32, "ƒŒƒxƒ‹2:<¨>", GetColor(255, 255, 255));
 	DrawString(m_textPosX + 30, m_textPosY + 64, "ƒŒƒxƒ‹3:<Z or A>", GetColor(255, 255, 255));
+
 }
