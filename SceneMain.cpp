@@ -2,32 +2,35 @@
 
 #include "SceneMain.h"
 #include "SceneTitle.h"
+#include "game.h"
 
-#include "player.h"
 
 void SceneMain::init()
 {
 	m_textPosX = 0;
-
+	m_pos.x = 100.0f;
+	m_pos.y = Game::kScreenHeight / 2;
 }
 
 SceneBase* SceneMain::update()
-{
-	// ï∂éöÇÃà⁄ìÆ
-	/*m_textPosX += m_textVecX;
-	if (m_textPosX < 0)
-	{
-		m_textPosX = 0;
-		m_textVecX = 4;
-	}
-	if (m_textPosX > 300)
-	{
-		m_textPosX = 300;
-		m_textVecX = -4;
-	}*/
-
-	
+{	
 	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
+
+	static int push = 0;
+
+	if (padState & PAD_INPUT_1) 
+	{
+		if (push == 0) 
+		{
+			m_pos.x++;	
+		}
+		push = 1;
+	}
+	else 
+	{
+		push = 0; //âüÇµÇƒÇ¢Ç»Ç¢èÍçá
+	}
+
 
 	if (padState & PAD_INPUT_3)
 	{
@@ -40,4 +43,7 @@ SceneBase* SceneMain::update()
 void SceneMain::draw()
 {
 	DrawString(m_textPosX, 0, "play", GetColor(255, 255, 255));
+	DrawCircle(m_pos.x, m_pos.y, 20, GetColor(255, 255, 255), true);
+	
+
 }

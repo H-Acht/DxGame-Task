@@ -3,7 +3,6 @@
 #include "game.h"
 
 #include "SceneManager.h"
-#include "player.h"
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -26,11 +25,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	// 最初のシーンの初期化
 	SceneManager scene;
 	scene.init();
-
-	player player;
-	player.init();
-
-
 	
 
 	while (ProcessMessage() == 0)
@@ -41,9 +35,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 		scene.update();
 		scene.draw();
-		
-		player.update();
-		player.draw();
 		
 		//裏画面を表画面を入れ替える
 		ScreenFlip();

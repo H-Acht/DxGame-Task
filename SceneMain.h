@@ -1,5 +1,6 @@
 #pragma once
 #include "SceneBase.h"
+#include "Vec2.h"
 
 class SceneMain : public SceneBase
 {
@@ -20,4 +21,6 @@ private:
 	// テキスト表示位置変更
 	int m_textPosX;
 	int m_textVecX;
+
+	Vec2 m_pos;
 };
