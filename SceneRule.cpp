@@ -38,5 +38,10 @@ SceneBase* SceneRule::update()
 
 void SceneRule::draw()
 {
-	DrawString(m_textPosX, m_textPosY, "連打。ただそれだけ", GetColor(255, 255, 255));
+	DrawString(m_textPosX-70, m_textPosY - 160, "ZとX、又はAとBを連打で進む。", GetColor(255, 255, 255));
+	DrawString(m_textPosX-90, m_textPosY - 96, "赤玉よりも先にゴールを超えろ！", GetColor(255, 255, 255));
+
+	DrawString(m_textPosX + 30, m_textPosY, "レベル1:<←>", GetColor(255, 255, 255));
+	DrawString(m_textPosX + 30, m_textPosY + 32, "レベル2:<→>", GetColor(255, 255, 255));
+	DrawString(m_textPosX + 30, m_textPosY + 64, "レベル3:<Z or A>", GetColor(255, 255, 255));
 }

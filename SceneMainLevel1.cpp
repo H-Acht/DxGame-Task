@@ -38,11 +38,11 @@ SceneBase* SceneMainLevel1::update()
 	{
 		if (push == 0)
 		{
-			m_pos.x += 5.0f;
+			m_pos.x += 50.0f;
 		}
 		push = 1;
 	}
-	else 
+	else
 	{
 		push = 0;
 	}
