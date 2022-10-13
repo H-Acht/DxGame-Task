@@ -38,7 +38,7 @@ SceneBase* SceneMainLevel1::update()
 	{
 		if (push == 0)
 		{
-			m_pos.x += 50.0f;
+			m_pos.x += 5.0f;
 		}
 		push = 1;
 	}
@@ -73,7 +73,7 @@ SceneBase* SceneMainLevel1::update()
 void SceneMainLevel1::draw()
 {
 	DrawString(0, 0, "ƒŒƒxƒ‹1", GetColor(255, 255, 255));
+	DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
 	DrawCircle(m_pos.x, m_pos.y, 20, GetColor(255, 255, 0), true);
 	DrawCircle(m_ePos.x, m_ePos.y, 20, GetColor(255, 0, 0), true);
-	DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
 }

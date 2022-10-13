@@ -73,7 +73,7 @@ SceneBase* SceneMainLevel2::update()
 void SceneMainLevel2::draw()
 {
 	DrawString(0, 0, "ƒŒƒxƒ‹2", GetColor(255, 255, 255));
+	DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
 	DrawCircle(m_pos.x, m_pos.y, 20, GetColor(255, 255, 0), true);
 	DrawCircle(m_ePos.x, m_ePos.y, 20, GetColor(255, 0, 0), true);
-	DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
 }
