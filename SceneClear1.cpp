@@ -23,7 +23,7 @@ SceneBase* SceneClear1::update()
 
 void SceneClear1::draw()
 {
-	DrawString(m_textPosX +130, m_textPosY - 100, "Lv.1 CLEAR!!", GetColor(255, 255, 255));
+	DrawString(m_textPosX +75, m_textPosY - 100, "Lv.1 CLEAR!!", GetColor(255, 255, 255));
 	DrawString(m_textPosX-110, m_textPosY, "Pless C Key or X to Back to Title", GetColor(255, 255, 255));
 
 }
