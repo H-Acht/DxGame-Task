@@ -1,6 +1,5 @@
 #pragma once
 #include "SceneBase.h"
-#include "Vec2.h"
 
 class SceneFail : public SceneBase
 {
