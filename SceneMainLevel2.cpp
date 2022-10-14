@@ -2,7 +2,7 @@
 
 #include "SceneMainLevel2.h"
 #include "SceneTitle.h"
-#include "SceneClear.h"
+#include "SceneClear2.h"
 #include "SceneFail.h"
 
 #include "game.h"
@@ -22,6 +22,9 @@ void SceneMainLevel2::init()
 	m_handle = LoadGraph("BG/background_B.jpg");
 	m_Phandle = LoadGraph("CC/Snails_PP.png");
 	m_Ehandle = LoadGraph("CC/Snails_BB.png");
+
+	m_countTimer = 0;
+	m_EcountTimer = 0;
 }
 
 SceneBase* SceneMainLevel2::update()
@@ -58,16 +61,20 @@ SceneBase* SceneMainLevel2::update()
 
 	if (m_pos.x >= GoalLineX)
 	{
-		return (new SceneClear);
+		return (new SceneClear2);
 	}
 
 	void enemy();
 	{
-		m_ePos.x += 0.5f;
-
-		if (m_ePos.x >= GoalLineX)
+		m_EcountTimer++;
+		if (m_EcountTimer >= 150)
 		{
-			return(new SceneFail);
+			m_ePos.x += 0.5f;
+
+			if (m_ePos.x >= GoalLineX)
+			{
+				return(new SceneFail);
+			}
 		}
 	}
 
@@ -76,10 +83,34 @@ SceneBase* SceneMainLevel2::update()
 
 void SceneMainLevel2::draw()
 {
-	DrawGraph(0, 0, m_handle, TRUE);
+	if (true)
+	{
+		SetFontSize(64);
 
-	DrawString(0, 0, "ƒŒƒxƒ‹2", GetColor(0, 255, 255));
-	DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
-	DrawGraph(m_pos.x, m_pos.y, m_Phandle, TRUE);
-	DrawGraph(m_ePos.x, m_ePos.y, m_Ehandle, TRUE);
+		DrawString(240, 200, "3", GetColor(0, 255, 0));
+		m_countTimer++;
+
+		if (m_countTimer > 50)
+		{
+			DrawString(280, 200, "2", GetColor(0, 255, 0));
+			m_countTimer++;
+
+			if (m_countTimer > 150)
+			{
+				DrawString(320, 200, "1...", GetColor(0, 255, 0));
+				m_countTimer++;
+
+				if (m_countTimer > 300)
+				{
+					DrawGraph(0, 0, m_handle, TRUE);
+
+					SetFontSize(32);
+					DrawString(0, 0, "ƒŒƒxƒ‹2", GetColor(0, 255, 255));
+					DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
+					DrawGraph(m_pos.x, m_pos.y, m_Phandle, TRUE);
+					DrawGraph(m_ePos.x, m_ePos.y, m_Ehandle, TRUE);
+				}
+			}
+		}
+	}
 }

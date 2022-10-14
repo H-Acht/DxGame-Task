@@ -31,4 +31,6 @@ private:
 	int m_Phandle;
 	int m_Ehandle;
 
+	int m_countTimer;
+	int m_EcountTimer;
 };
