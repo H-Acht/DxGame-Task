@@ -11,13 +11,17 @@
 void SceneMainLevel2::init()
 {
 	m_pos.x = 100.0f;
-	m_pos.y = 160.0f;
+	m_pos.y = 120.0f;
 
 	m_ePos.x = 100.0f;
-	m_ePos.y = 380.0f;
+	m_ePos.y = 300.0f;
 
 	GoalLineX = 600;
 	GoalLineY = 0;
+
+	m_handle = LoadGraph("BG/background_B.jpg");
+	m_Phandle = LoadGraph("CC/Snails_PP.png");
+	m_Ehandle = LoadGraph("CC/Snails_BB.png");
 }
 
 SceneBase* SceneMainLevel2::update()
@@ -72,8 +76,10 @@ SceneBase* SceneMainLevel2::update()
 
 void SceneMainLevel2::draw()
 {
+	DrawGraph(0, 0, m_handle, TRUE);
+
 	DrawString(0, 0, "ƒŒƒxƒ‹2", GetColor(255, 255, 255));
 	DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
-	DrawCircle(m_pos.x, m_pos.y, 20, GetColor(255, 255, 0), true);
-	DrawCircle(m_ePos.x, m_ePos.y, 20, GetColor(255, 0, 0), true);
+	DrawGraph(m_pos.x, m_pos.y, m_Phandle, TRUE);
+	DrawGraph(m_ePos.x, m_ePos.y, m_Ehandle, TRUE);
 }
