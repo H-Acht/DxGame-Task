@@ -48,7 +48,7 @@ SceneBase* SceneMainLevel3::update()
 	{
 		if (push == 0)
 		{
-			m_pos.x += 5.0f;
+			m_pos.x += 50.0f;
 		}
 		push = 1;
 	}
@@ -97,14 +97,12 @@ void SceneMainLevel3::draw()
 		if (m_countTimer > 50)
 		{
 			DrawString(280, 200, "2", GetColor(0, 255, 0));
-			m_countTimer++;
-
-			if (m_countTimer > 150)
+			
+			if (m_countTimer > 100)
 			{
 				DrawString(320, 200, "1...", GetColor(0, 255, 0));
-				m_countTimer++;
 				
-				if (m_countTimer > 300)
+				if (m_countTimer > 150)
 				{
 					DrawGraph(0, 0, m_handle, TRUE);
 
