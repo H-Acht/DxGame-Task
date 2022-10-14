@@ -13,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\メイン">
+      <UniqueIdentifier>{f91d151a-70ad-4e0c-bd7b-84ce223a6569}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\画面切り替え">
+      <UniqueIdentifier>{096b6bce-5063-4bf9-81af-12e9556e2044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\リザルト">
+      <UniqueIdentifier>{7dceade0-9a22-4ecf-89c4-6804950f8465}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\リザルト">
+      <UniqueIdentifier>{52a57416-09e7-4224-87a0-b666122bf6d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\画面切り替え">
+      <UniqueIdentifier>{996d5db1-3a94-4580-8dba-86d5b9a22203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\メイン">
+      <UniqueIdentifier>{efcd530b-c3d7-43c9-8711-360664462f96}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,32 +39,38 @@
     <ClCompile Include="Vec2.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="SceneBase.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneMainLevel1.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="SceneTitle.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneManaer.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneClear.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="SceneRule.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="SceneFail.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="SceneMainLevel1.cpp">
+      <Filter>ソース ファイル\メイン</Filter>
     </ClCompile>
     <ClCompile Include="SceneMainLevel2.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\メイン</Filter>
     </ClCompile>
     <ClCompile Include="SceneMainLevel3.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\メイン</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneClear1.cpp">
+      <Filter>ソース ファイル\リザルト</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneClear2.cpp">
+      <Filter>ソース ファイル\リザルト</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneClear3.cpp">
+      <Filter>ソース ファイル\リザルト</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneBase.cpp">
+      <Filter>ソース ファイル\画面切り替え</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManaer.cpp">
+      <Filter>ソース ファイル\画面切り替え</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneFail.cpp">
+      <Filter>ソース ファイル\リザルト</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -56,32 +80,38 @@
     <ClInclude Include="Vec2.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="SceneBase.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneMainLevel1.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="SceneTitle.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneClear.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="SceneRule.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="SceneFail.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="SceneBase.h">
+      <Filter>ヘッダー ファイル\画面切り替え</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneClear3.h">
+      <Filter>ヘッダー ファイル\リザルト</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneClear1.h">
+      <Filter>ヘッダー ファイル\リザルト</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneClear2.h">
+      <Filter>ヘッダー ファイル\リザルト</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMainLevel1.h">
+      <Filter>ヘッダー ファイル\メイン</Filter>
     </ClInclude>
     <ClInclude Include="SceneMainLevel2.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\メイン</Filter>
     </ClInclude>
     <ClInclude Include="SceneMainLevel3.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\メイン</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneFail.h">
+      <Filter>ヘッダー ファイル\リザルト</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>ヘッダー ファイル\画面切り替え</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

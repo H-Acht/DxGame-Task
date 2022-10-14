@@ -147,7 +147,9 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneBase.cpp" />
-    <ClCompile Include="SceneClear.cpp" />
+    <ClCompile Include="SceneClear1.cpp" />
+    <ClCompile Include="SceneClear2.cpp" />
+    <ClCompile Include="SceneClear3.cpp" />
     <ClCompile Include="SceneFail.cpp" />
     <ClCompile Include="SceneMainLevel1.cpp" />
     <ClCompile Include="SceneMainLevel2.cpp" />
@@ -160,7 +162,9 @@
   <ItemGroup>
     <ClInclude Include="game.h" />
     <ClInclude Include="SceneBase.h" />
-    <ClInclude Include="SceneClear.h" />
+    <ClInclude Include="SceneClear3.h" />
+    <ClInclude Include="SceneClear1.h" />
+    <ClInclude Include="SceneClear2.h" />
     <ClInclude Include="SceneFail.h" />
     <ClInclude Include="SceneMainLevel1.h" />
     <ClInclude Include="SceneMainLevel2.h" />
