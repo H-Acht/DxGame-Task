@@ -31,5 +31,4 @@ void SceneClear3::draw()
 	DrawString(m_textPosX + 75, m_textPosY - 100, "Lv.3 CLEAR!!", GetColor(255, 255, 255));
 	DrawString(m_textPosX - 110, m_textPosY, "Pless C Key or X to Back to Title", GetColor(255, 255, 255));
 	DrawString(m_textPosX + 40, m_textPosY + 100, "DO NOT PLESS [Y]...", GetColor(255, 0, 0));
-
 }
