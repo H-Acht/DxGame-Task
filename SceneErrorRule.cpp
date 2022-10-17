@@ -1,5 +1,6 @@
 #include "DxLib.h"
 #include "SceneErrorRule.h"
+#include "SceneErrorMain.h"
 
 void SceneErrorRule::init()
 {
@@ -9,7 +10,11 @@ void SceneErrorRule::init()
 
 SceneBase* SceneErrorRule::update()
 {
-
+	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
+	if (padState & PAD_INPUT_1)
+	{
+		return(new SceneErrorMain);
+	}
 
 
 	return this;
