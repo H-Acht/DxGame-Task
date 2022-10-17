@@ -80,7 +80,6 @@ SceneBase* SceneMainLevel2::update()
 			}
 		}
 	}
-
 	return this;
 }
 
