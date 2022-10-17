@@ -7,7 +7,6 @@ void SceneFail::init()
 {
 	m_textPosX = 140;
 	m_textPosY = 220;
-
 }
 
 SceneBase* SceneFail::update()
