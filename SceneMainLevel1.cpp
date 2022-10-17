@@ -61,6 +61,9 @@ SceneBase* SceneMainLevel1::update()
 
 	if (m_pos.x >= GoalLineX)
 	{
+		DeleteGraph(m_handle);
+		DeleteGraph(m_Phandle);
+		DeleteGraph(m_Ehandle);
 		return (new SceneClear1);
 	}
 

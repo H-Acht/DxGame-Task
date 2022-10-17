@@ -10,12 +10,7 @@ public:
 	virtual ~SceneMainLevel3() {}
 
 	virtual void init() override;
-	virtual void end() override 
-	{
-		DeleteGraph(m_handle);
-		DeleteGraph(m_Phandle);
-		DeleteGraph(m_Ehandle);
-	}
+	virtual void end() override {}
 
 	virtual SceneBase* update() override;
 	virtual void draw() override;
