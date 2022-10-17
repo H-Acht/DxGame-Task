@@ -65,7 +65,7 @@ SceneBase* SceneErrorMain::update()
 		{
 			if (m_EcountTimer % 30)
 			{
-				m_eVec.x = m_pos.x;
+				m_eVec.x = m_pos.x;	//kokokara
 				m_eVec.y = m_pos.y;
 
 				m_ePos.x += m_eVec.x;
