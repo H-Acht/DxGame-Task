@@ -31,6 +31,12 @@
     <Filter Include="ヘッダー ファイル\メイン">
       <UniqueIdentifier>{efcd530b-c3d7-43c9-8711-360664462f96}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\エラー">
+      <UniqueIdentifier>{b4c29b0e-cf50-4b38-9062-5593f92012a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\エラー">
+      <UniqueIdentifier>{1861a71b-613d-44d0-9861-d45abc41208b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -73,7 +79,13 @@
       <Filter>ソース ファイル\リザルト</Filter>
     </ClCompile>
     <ClCompile Include="SceneError.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\エラー</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneErrorTitle.cpp">
+      <Filter>ソース ファイル\エラー</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneErrorRule.cpp">
+      <Filter>ソース ファイル\エラー</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -117,7 +129,13 @@
       <Filter>ヘッダー ファイル\画面切り替え</Filter>
     </ClInclude>
     <ClInclude Include="SceneError.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\エラー</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneErrorTitle.h">
+      <Filter>ヘッダー ファイル\エラー</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneErrorRule.h">
+      <Filter>ヘッダー ファイル\エラー</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

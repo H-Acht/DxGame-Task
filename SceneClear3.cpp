@@ -1,6 +1,7 @@
 #include "DxLib.h"
 #include "SceneClear3.h"
 #include "SceneTitle.h"
+#include "SceneError.h"
 
 
 void SceneClear3::init()
@@ -19,7 +20,7 @@ SceneBase* SceneClear3::update()
 	}
 	if (padState & PAD_INPUT_4)
 	{
-		return (new SceneTitle);
+		return (new SceneError);
 	}
 
 	return this;

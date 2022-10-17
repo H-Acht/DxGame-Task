@@ -1,11 +1,11 @@
 #pragma once
 #include "SceneBase.h"
 
-class SceneError : public SceneBase
+class SceneErrorRule :	public SceneBase
 {
 public:
-	SceneError() {}
-	virtual ~SceneError() {}
+	SceneErrorRule() {}
+	virtual ~SceneErrorRule() {}
 
 	virtual void init() override;
 	virtual void end() override {}
@@ -15,7 +15,5 @@ public:
 private:
 	int m_textPosX;
 	int m_textPosY;
-
-	int m_countTimer;
 };
 
