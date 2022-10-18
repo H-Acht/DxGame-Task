@@ -7,6 +7,8 @@
 
 void SceneTitle::init()
 {
+	PlayMusic("BGM/HIRAHIRA.mp3", DX_PLAYTYPE_LOOP);
+
 	m_textPosX = Game::kScreenWidth / 2 -50;
 	m_textPosY = Game::kScreenHeight / 2;
 
