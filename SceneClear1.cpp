@@ -1,7 +1,7 @@
 #include "DxLib.h"
 #include "SceneClear1.h"
 #include "SceneTitle.h"
-
+#include "SceneMainLevel2.h"
 
 void SceneClear1::init()
 {
@@ -17,6 +17,10 @@ SceneBase* SceneClear1::update()
 	{
 		return (new SceneTitle);
 	}
+	else if (padState & PAD_INPUT_4)
+	{
+		return (new SceneMainLevel2);
+	}
 
 	return this;
 }
@@ -24,5 +28,7 @@ SceneBase* SceneClear1::update()
 void SceneClear1::draw()
 {
 	DrawString(m_textPosX +75, m_textPosY - 100, "Lv.1 CLEAR!!", GetColor(255, 255, 255));
-	DrawString(m_textPosX-110, m_textPosY, "Pless C Key or X to Back to Title", GetColor(255, 255, 255));
+	DrawString(m_textPosX-70, m_textPosY, "Pless X to Back to Title", GetColor(255, 255, 255));
+	DrawString(m_textPosX - 70, m_textPosY+100, "Pless Y to Go to Next Level!", GetColor(255, 255, 255));
+
 }
