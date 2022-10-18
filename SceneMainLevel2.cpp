@@ -38,6 +38,7 @@ SceneBase* SceneMainLevel2::update()
 		if (push == 0)
 		{
 			m_pos.x += 5.0f;
+			PlaySoundFile("SE/PushSound1.mp3", DX_PLAYTYPE_BACK);
 		}
 		push = 1;
 	}
@@ -46,6 +47,7 @@ SceneBase* SceneMainLevel2::update()
 		if (push == 0)
 		{
 			m_pos.x += 5.0f;
+			PlaySoundFile("SE/PushSound1.mp3", DX_PLAYTYPE_BACK);
 		}
 		push = 1;
 	}
