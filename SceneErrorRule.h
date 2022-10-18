@@ -15,5 +15,9 @@ public:
 private:
 	int m_textPosX;
 	int m_textPosY;
+
+	int Color1;
+	int Color2;
+
 };
 

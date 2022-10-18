@@ -18,9 +18,6 @@ private:
 	Vec2 m_pos;
 	Vec2 m_ePos;
 
-	
-	Vec2 m_eVec;
-
 	int GoalLineX;
 	int GoalLineY;
 
@@ -30,5 +27,6 @@ private:
 
 	int m_countTimer;
 	int m_EcountTimer;
+
 };
 
