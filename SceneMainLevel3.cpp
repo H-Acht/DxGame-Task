@@ -78,7 +78,7 @@ SceneBase* SceneMainLevel3::update()
 		m_EcountTimer++;
 		if (m_EcountTimer >= 150)
 		{
-			m_ePos.x += 0.8;
+			m_ePos.x += 0.8f;
 
 			if (m_ePos.x >= GoalLineX)
 			{
