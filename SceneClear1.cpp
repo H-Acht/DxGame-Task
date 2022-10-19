@@ -15,11 +15,11 @@ SceneBase* SceneClear1::update()
 
 	if (padState & PAD_INPUT_3)
 	{
-		return (new SceneTitle);
+		return (new SceneMainLevel2);
 	}
 	else if (padState & PAD_INPUT_4)
 	{
-		return (new SceneMainLevel2);
+		return (new SceneTitle);
 	}
 
 	return this;
@@ -27,8 +27,7 @@ SceneBase* SceneClear1::update()
 
 void SceneClear1::draw()
 {
-	DrawString(m_textPosX +75, m_textPosY - 100, "Lv.1 CLEAR!!", GetColor(255, 255, 255));
-	DrawString(m_textPosX-70, m_textPosY, "Pless X to Back to Title", GetColor(255, 255, 255));
-	DrawString(m_textPosX - 70, m_textPosY+100, "Pless Y to Go to Next Level!", GetColor(255, 255, 255));
-
+	DrawString(m_textPosX +72, m_textPosY - 100, "Lv.1 CLEAR!!", GetColor(196, 112, 34));
+	DrawString(m_textPosX - 85, m_textPosY, "Pless [X] to Go to Next Level!", GetColor(255, 255, 255));
+	DrawString(m_textPosX-45, m_textPosY+100, "Pless [Y] to Back to Title", GetColor(255, 255, 255));
 }
