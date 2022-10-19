@@ -110,13 +110,13 @@ void SceneMainLevel1::draw()
 
 				if (m_countTimer > 150)
 				{
-					DrawGraph(0, 0, m_handle, TRUE);
+					DrawGraph(0, 0, static_cast<int> (m_handle), TRUE);
 
 					SetFontSize(32);
 					DrawString(0, 0, "ƒŒƒxƒ‹1", GetColor(0, 255, 255));
 					DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
-					DrawGraph(m_pos.x, m_pos.y, m_Phandle, TRUE);
-					DrawTurnGraph(m_ePos.x, m_ePos.y, m_Ehandle, TRUE);
+					DrawGraph(static_cast<int> (m_pos.x), static_cast<int> (m_pos.y), m_Phandle, TRUE);
+					DrawGraph(static_cast<int> (m_ePos.x), static_cast<int> (m_ePos.y), m_Ehandle, TRUE);
 				}
 			}
 		}

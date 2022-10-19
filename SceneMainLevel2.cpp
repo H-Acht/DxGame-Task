@@ -19,7 +19,7 @@ void SceneMainLevel2::init()
 	GoalLineX = 600;
 	GoalLineY = 0;
 
-	m_handle = LoadGraph("BG/background_B.jpg");
+	m_handle =  LoadGraph("BG/background_B.jpg");
 	m_Phandle = LoadGraph("CC/Snails_PP.png");
 	m_Ehandle = LoadGraph("CC/Snails_BB.png");
 
@@ -116,7 +116,7 @@ void SceneMainLevel2::draw()
 					DrawString(0, 0, "ƒŒƒxƒ‹2", GetColor(0, 255, 255));
 					DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
 					DrawGraph(m_pos.x, m_pos.y, m_Phandle, TRUE);
-					DrawGraph(m_ePos.x, m_ePos.y, m_Ehandle, TRUE);
+					DrawTurnGraph(m_ePos.x, m_ePos.y, m_Ehandle, TRUE);
 				}
 			}
 		}

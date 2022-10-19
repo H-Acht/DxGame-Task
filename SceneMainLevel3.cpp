@@ -122,6 +122,7 @@ void SceneMainLevel3::draw()
 					DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
 					DrawGraph(m_pos.x, m_pos.y, m_Phandle, TRUE);
 					DrawTurnGraph(m_ePos.x, m_ePos.y, m_Ehandle, TRUE);
+
 				}
 			}
 		}
