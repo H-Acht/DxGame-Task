@@ -58,6 +58,9 @@ SceneBase* SceneMainLevel1::update()
 
 	if (padState & PAD_INPUT_4)
 	{
+		DeleteGraph(m_handle);
+		DeleteGraph(m_Phandle);
+		DeleteGraph(m_Ehandle);
 		return (new SceneTitle);
 	}
 
@@ -78,6 +81,9 @@ SceneBase* SceneMainLevel1::update()
 
 			if (m_ePos.x >= GoalLineX)
 			{
+				DeleteGraph(m_handle);
+				DeleteGraph(m_Phandle);
+				DeleteGraph(m_Ehandle);
 				return(new SceneFail);
 			}
 		}
