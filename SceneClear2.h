@@ -5,7 +5,11 @@
 class SceneClear2 : public SceneBase
 {
 public:
-	SceneClear2() {}
+	SceneClear2()
+	{
+		m_textPosX = 0;
+		m_textPosY = 0;
+	}
 	virtual ~SceneClear2() {}
 
 	virtual void init() override;
