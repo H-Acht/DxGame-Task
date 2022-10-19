@@ -56,7 +56,7 @@ SceneBase* SceneMainLevel1::update()
 		push = 0;
 	}
 
-	if (padState & PAD_INPUT_3)
+	if (padState & PAD_INPUT_4)
 	{
 		return (new SceneTitle);
 	}
