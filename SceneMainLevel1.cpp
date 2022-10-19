@@ -116,7 +116,7 @@ void SceneMainLevel1::draw()
 					DrawString(0, 0, "ƒŒƒxƒ‹1", GetColor(0, 255, 255));
 					DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
 					DrawGraph(static_cast<int> (m_pos.x), static_cast<int> (m_pos.y), m_Phandle, TRUE);
-					DrawGraph(static_cast<int> (m_ePos.x), static_cast<int> (m_ePos.y), m_Ehandle, TRUE);
+					DrawTurnGraph(static_cast<int> (m_ePos.x), static_cast<int> (m_ePos.y), m_Ehandle, TRUE);
 				}
 			}
 		}
