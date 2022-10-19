@@ -6,7 +6,18 @@
 class SceneMainLevel1 : public SceneBase
 {
 public:
-	SceneMainLevel1(){}
+	SceneMainLevel1()
+	{
+		GoalLineX = 0;
+		GoalLineY = 0;
+
+		m_handle = 0;
+		m_Phandle = 0;
+		m_Ehandle = 0;
+
+		m_countTimer = 0;
+		m_EcountTimer = 0;
+	}
 	virtual ~SceneMainLevel1() {}
 
 	virtual void init() override;
