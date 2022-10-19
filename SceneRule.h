@@ -5,7 +5,11 @@
 class SceneRule : public SceneBase
 {
 public:
-	SceneRule() {}
+	SceneRule() 
+	{
+		m_textPosX = 0;
+		m_textPosY = 0;
+	}
 	virtual ~SceneRule() {}
 
 	virtual void init() override;

@@ -4,7 +4,12 @@
 class SceneError : public SceneBase
 {
 public:
-	SceneError() {}
+	SceneError() 
+	{
+		m_textPosX = 0;
+		m_textPosY = 0;
+		m_countTimer = 0;
+	}
 	virtual ~SceneError() {}
 
 	virtual void init() override;
@@ -15,7 +20,6 @@ public:
 private:
 	int m_textPosX;
 	int m_textPosY;
-
 	int m_countTimer;
 };
 

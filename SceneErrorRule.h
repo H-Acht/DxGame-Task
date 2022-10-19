@@ -4,7 +4,13 @@
 class SceneErrorRule :	public SceneBase
 {
 public:
-	SceneErrorRule() {}
+	SceneErrorRule()
+	{
+		m_textPosX = 0;
+		m_textPosY = 0;
+		Color1 = 0;
+		Color2 = 0;
+	}
 	virtual ~SceneErrorRule() {}
 
 	virtual void init() override;
@@ -18,6 +24,5 @@ private:
 
 	int Color1;
 	int Color2;
-
 };
 

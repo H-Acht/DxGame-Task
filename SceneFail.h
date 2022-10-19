@@ -4,7 +4,11 @@
 class SceneFail : public SceneBase
 {
 public:
-	SceneFail() {}
+	SceneFail() 
+	{
+		m_textPosX = 0;
+		m_textPosY = 0;
+	}
 	virtual ~SceneFail() {}
 
 	virtual void init() override;
