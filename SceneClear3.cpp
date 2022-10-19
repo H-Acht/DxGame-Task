@@ -29,6 +29,6 @@ SceneBase* SceneClear3::update()
 void SceneClear3::draw()
 {
 	DrawString(m_textPosX + 75, m_textPosY - 100, "Lv.3 CLEAR!!", GetColor(255, 215, 0));
-	DrawString(m_textPosX - 110, m_textPosY, "Pless [Y] to Back to Title", GetColor(255, 255, 255));
+	DrawString(m_textPosX - 45, m_textPosY, "Pless [Y] to Back to Title", GetColor(255, 255, 255));
 	DrawString(m_textPosX + 40, m_textPosY + 100, "DO NOT PLESS [X]...", GetColor(255, 0, 0));
 }
