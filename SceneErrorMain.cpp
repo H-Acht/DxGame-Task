@@ -4,12 +4,17 @@
 #include "SceneErrorTitle.h"
 #include "SceneTitle.h"
 
+namespace
+{
+
+}
+
 void SceneErrorMain::init()
 {
 	m_pos.x = 100.0f;
-	m_pos.y = 120.0f;
+	m_pos.y = 200.0f;
 
-	m_ePos.x = 0.0f;
+	m_ePos.x = -300.0f;
 	m_ePos.y = 100.0f;
 
 	GoalLineX = 600;
@@ -17,7 +22,7 @@ void SceneErrorMain::init()
 
 	m_handle = LoadGraph("BG/te.jpg");
 	m_Phandle = LoadGraph("CC/Snails_PP.png");
-	m_Ehandle = LoadGraph("CC/Snails_AA.png");
+	m_Ehandle = LoadGraph("CC/creature.png");
 
 	m_countTimer = 0;
 	m_EcountTimer = 0;
@@ -52,9 +57,9 @@ SceneBase* SceneErrorMain::update()
 		push = 0;
 	}
 
-	if (padState & PAD_INPUT_3)
+	if (padState & PAD_INPUT_4)
 	{
-		return (new SceneErrorTitle);
+		PlaySoundFile("SE/warai.wav", DX_PLAYTYPE_BACK);
 	}
 
 	if (m_pos.x >= GoalLineX)
@@ -106,8 +111,6 @@ void SceneErrorMain::draw()
 
 				if (m_countTimer > 150)
 				{
-
-					//DrawGraph(0, 0, m_handle, TRUE);
 					DrawBox(0, 0, 640, 480, GetColor(0, 0, 0), true);
 					
 					if (m_pos.x >= Game::kScreenWidth / 2 - 10)
@@ -115,10 +118,6 @@ void SceneErrorMain::draw()
 						DrawGraph(0, 0, m_handle, true);
 						
 					}
-
-					//SetFontSize(32);
-					//DrawString(0, 0, "ƒŒƒxƒ‹1", GetColor(0, 255, 255));
-					//DrawLine(GoalLineX, GoalLineY, GoalLineX, 480, GetColor(255, 0, 255), 20);
 					DrawGraph(m_pos.x, m_pos.y, m_Phandle, TRUE);
 					DrawTurnGraph(m_ePos.x, m_ePos.y, m_Ehandle, TRUE);
 
