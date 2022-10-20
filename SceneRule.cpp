@@ -44,7 +44,7 @@ void SceneRule::draw()
 
 	DrawString(m_textPosX + 30, m_textPosY, "レベル1:<←>", GetColor(255, 255, 255));
 	DrawString(m_textPosX + 30, m_textPosY + 32, "レベル2:<→>", GetColor(255, 255, 255));
-	DrawString(m_textPosX + 30, m_textPosY + 64, "レベル3:<Z or A>", GetColor(255, 255, 255));
+	DrawString(m_textPosX + 30, m_textPosY + 64, "レベル3:<A>", GetColor(255, 255, 255));
 	DrawString(m_textPosX + 30, m_textPosY + 96, "タイトルに戻る:<↓>", GetColor(255, 255, 255));
 
 }

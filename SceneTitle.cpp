@@ -37,6 +37,6 @@ void SceneTitle::draw()
 	SetFontSize(32);
 
 	DrawString(m_textPosX-150, m_textPosY - 20, "Å`òAë≈ÅBÇΩÇæÇªÇÍÇæÇØÅ`", GetColor(255, 255, 255));
-	DrawString(m_textPosX-70, m_textPosY +50, "Pless UP Key", GetColor(255, 255, 255));
+	DrawString(m_textPosX-50, m_textPosY +50, "Pless <Å™>", GetColor(255, 255, 255));
 
 }
