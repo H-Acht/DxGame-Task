@@ -6,6 +6,8 @@
 
 void SceneClear3::init()
 {
+	PlaySoundFile("SE/SEIKOU.mp3", DX_PLAYTYPE_BACK);
+
 	m_textPosX = 140;
 	m_textPosY = 220;
 }
