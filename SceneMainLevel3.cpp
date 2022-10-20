@@ -29,9 +29,8 @@ void SceneMainLevel3::init()
 
 SceneBase* SceneMainLevel3::update()
 {
-
 	true;
-
+	
 	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
 
 	static int push = 0;
@@ -58,6 +57,14 @@ SceneBase* SceneMainLevel3::update()
 	else
 	{
 		push = 0;
+	}
+	
+	if (padState & PAD_INPUT_5)
+	{
+		if (padState & PAD_INPUT_6)
+		{
+			return (new SceneClear3);
+		}
 	}
 
 	if (padState & PAD_INPUT_4)
