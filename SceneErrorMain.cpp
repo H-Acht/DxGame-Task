@@ -25,68 +25,66 @@ void SceneErrorMain::init()
 
 SceneBase* SceneErrorMain::update()
 {
-
-	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
-
-	static int push = 0;
-
-	if (padState & PAD_INPUT_1)
+	m_EcountTimer++;
+	if (m_EcountTimer >= 150)
 	{
-		if (push == 0)
+		int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
+
+		static int push = 0;
+
+		if (padState & PAD_INPUT_1)
 		{
-			m_pos.x += 5.0f;
+			if (push == 0)
+			{
+				m_pos.x += 5.0f;
+			}
+			push = 1;
 		}
-		push = 1;
-	}
-	else if (padState & PAD_INPUT_2)
-	{
-		if (push == 0)
+		else if (padState & PAD_INPUT_2)
 		{
-			m_pos.x += 5.0f;
+			if (push == 0)
+			{
+				m_pos.x += 5.0f;
+			}
+			push = 1;
 		}
-		push = 1;
-	}
-	else
-	{
-		push = 0;
-	}
+		else
+		{
+			push = 0;
+		}
 
-	if (padState & PAD_INPUT_4)
-	{
-		PlaySoundFile("SE/warai.wav", DX_PLAYTYPE_BACK);
-	}
+		if (padState & PAD_INPUT_4)
+		{
+			PlaySoundFile("SE/warai.wav", DX_PLAYTYPE_BACK);
+		}
 
-	if (m_pos.x >= GoalLineX)
-	{
-		DeleteGraph(m_handle);
-		DeleteGraph(m_Phandle);
-		DeleteGraph(m_Ehandle);
-		StopMusic();
-		return (new SceneTitle);
-	}
+		if (m_pos.x >= GoalLineX)
+		{
+			DeleteGraph(m_handle);
+			DeleteGraph(m_Phandle);
+			DeleteGraph(m_Ehandle);
+			StopMusic();
+			return (new SceneTitle);
+		}
 
-	if (m_ePos.x + 350 >= m_pos.x)
-	{
-		return (new SceneErrorFail);
-	}
+		if (m_ePos.x + 350 >= m_pos.x)
+		{
+			return (new SceneErrorFail);
+		}
 
-	void enemy();
-	{
-		m_EcountTimer++;
-		if (m_EcountTimer >= 150)
+		void enemy();
 		{
 			if (m_EcountTimer % 60 == 0)
 			{
 				m_ePos.x += 60.0f;
 			}
 		}
-	}
 
-	if (m_pos.x == Game::kScreenWidth / 2 - 10)
-	{
-		PlaySoundFile("SE/BAN.mp3", DX_PLAYTYPE_BACK);
+		if (m_pos.x == Game::kScreenWidth / 2 - 10)
+		{
+			PlaySoundFile("SE/BAN.mp3", DX_PLAYTYPE_BACK);
+		}
 	}
-
 	return this;
 }
 
