@@ -41,6 +41,6 @@ void SceneErrorRule::draw()
 
 	DrawString(m_textPosX, m_textPosY, "レベル1:<��>", Color1);
 	DrawString(m_textPosX, m_textPosY + 32, "レベル2:<��>", Color2);
-	DrawString(m_textPosX, m_textPosY + 64, "レベル3:<Z or A>", GetColor(255, 0, 0));
+	DrawString(m_textPosX, m_textPosY + 64, "レベル3:<A>", GetColor(255, 0, 0));
 
 }

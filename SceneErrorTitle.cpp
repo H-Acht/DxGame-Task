@@ -33,7 +33,7 @@ void SceneErrorTitle::draw()
 
 	SetFontSize(64);
 
-	DrawString(m_textPosX - 30, m_textPosY - 100, "é€£æ‰", GetColor(255, 0, 0));
+	DrawString(m_textPosX - 50, m_textPosY - 100, "é€£æ‰", GetColor(255, 0, 0));
 
 	SetFontSize(32);
 
