@@ -16,7 +16,6 @@ public:
 		m_Ehandle = 0;
 
 		m_countTimer = 0;
-		m_EcountTimer = 0;
 	}
 	virtual ~SceneMainLevel1() {}
 
@@ -38,6 +37,4 @@ private:
 	int m_Ehandle;
 
 	int m_countTimer;
-	int m_EcountTimer;
-
 };

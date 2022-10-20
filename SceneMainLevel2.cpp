@@ -24,13 +24,12 @@ void SceneMainLevel2::init()
 	m_Ehandle = LoadGraph("CC/Snails_BB.png");
 
 	m_countTimer = 0;
-	m_EcountTimer = 0;
 }
 
 SceneBase* SceneMainLevel2::update()
 {
-	m_EcountTimer++;
-	if (m_EcountTimer >= 150)
+	m_countTimer++;
+	if (m_countTimer >= 150)
 	{
 		int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
 
@@ -99,7 +98,6 @@ void SceneMainLevel2::draw()
 		SetFontSize(64);
 
 		DrawString(240, 200, "3", GetColor(0, 255, 0));
-		m_countTimer++;
 
 		if (m_countTimer > 50)
 		{
