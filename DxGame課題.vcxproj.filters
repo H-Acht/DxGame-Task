@@ -90,6 +90,9 @@
     <ClCompile Include="SceneErrorMain.cpp">
       <Filter>ソース ファイル\エラー</Filter>
     </ClCompile>
+    <ClCompile Include="SceneErrorFail.cpp">
+      <Filter>ソース ファイル\エラー</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -142,6 +145,9 @@
     </ClInclude>
     <ClInclude Include="SceneErrorMain.h">
       <Filter>ヘッダー ファイル\エラー</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneErrorFail.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -151,6 +151,7 @@
     <ClCompile Include="SceneClear2.cpp" />
     <ClCompile Include="SceneClear3.cpp" />
     <ClCompile Include="SceneError.cpp" />
+    <ClCompile Include="SceneErrorFail.cpp" />
     <ClCompile Include="SceneErrorMain.cpp" />
     <ClCompile Include="SceneErrorRule.cpp" />
     <ClCompile Include="SceneErrorTitle.cpp" />
@@ -170,6 +171,7 @@
     <ClInclude Include="SceneClear1.h" />
     <ClInclude Include="SceneClear2.h" />
     <ClInclude Include="SceneError.h" />
+    <ClInclude Include="SceneErrorFail.h" />
     <ClInclude Include="SceneErrorMain.h" />
     <ClInclude Include="SceneErrorRule.h" />
     <ClInclude Include="SceneErrorTitle.h" />
