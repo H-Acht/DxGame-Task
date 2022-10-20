@@ -9,7 +9,7 @@ void SceneErrorMain::init()
 	m_pos.x = 100.0f;
 	m_pos.y = 200.0f;
 
-	m_ePos.x = -300.0f;
+	m_ePos.x = -330.0f;
 	m_ePos.y = 100.0f;
 
 	GoalLineX = 600;
@@ -77,7 +77,7 @@ SceneBase* SceneErrorMain::update()
 		{
 			if (m_EcountTimer % 60 == 0)
 			{
-				m_ePos.x += 30.0f;
+				m_ePos.x += 60.0f;
 			}
 		}
 	}
