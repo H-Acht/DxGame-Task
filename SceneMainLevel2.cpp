@@ -29,53 +29,53 @@ void SceneMainLevel2::init()
 
 SceneBase* SceneMainLevel2::update()
 {
-	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
-
-	static int push = 0;
-
-	if (padState & PAD_INPUT_1)
+	m_EcountTimer++;
+	if (m_EcountTimer >= 150)
 	{
-		if (push == 0)
+		int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
+
+		static int push = 0;
+
+		if (padState & PAD_INPUT_1)
 		{
-			m_pos.x += 5.0f;
-			PlaySoundFile("SE/PushSound1.mp3", DX_PLAYTYPE_BACK);
+			if (push == 0)
+			{
+				m_pos.x += 5.0f;
+				PlaySoundFile("SE/PushSound1.mp3", DX_PLAYTYPE_BACK);
+			}
+			push = 1;
 		}
-		push = 1;
-	}
-	else if (padState & PAD_INPUT_2)
-	{
-		if (push == 0)
+		else if (padState & PAD_INPUT_2)
 		{
-			m_pos.x += 5.0f;
-			PlaySoundFile("SE/PushSound1.mp3", DX_PLAYTYPE_BACK);
+			if (push == 0)
+			{
+				m_pos.x += 5.0f;
+				PlaySoundFile("SE/PushSound1.mp3", DX_PLAYTYPE_BACK);
+			}
+			push = 1;
 		}
-		push = 1;
-	}
-	else
-	{
-		push = 0;
-	}
+		else
+		{
+			push = 0;
+		}
 
-	if (padState & PAD_INPUT_4)
-	{
-		DeleteGraph(m_handle);
-		DeleteGraph(m_Phandle);
-		DeleteGraph(m_Ehandle);
-		return (new SceneTitle);
-	}
+		if (padState & PAD_INPUT_4)
+		{
+			DeleteGraph(m_handle);
+			DeleteGraph(m_Phandle);
+			DeleteGraph(m_Ehandle);
+			return (new SceneTitle);
+		}
 
-	if (m_pos.x >= GoalLineX)
-	{
-		DeleteGraph(m_handle);
-		DeleteGraph(m_Phandle);
-		DeleteGraph(m_Ehandle);
-		return (new SceneClear2);
-	}
+		if (m_pos.x >= GoalLineX)
+		{
+			DeleteGraph(m_handle);
+			DeleteGraph(m_Phandle);
+			DeleteGraph(m_Ehandle);
+			return (new SceneClear2);
+		}
 
-	void enemy();
-	{
-		m_EcountTimer++;
-		if (m_EcountTimer >= 150)
+		void enemy();
 		{
 			m_ePos.x += 0.5f;
 
@@ -87,6 +87,7 @@ SceneBase* SceneMainLevel2::update()
 				return(new SceneFail);
 			}
 		}
+	
 	}
 	return this;
 }
