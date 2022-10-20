@@ -32,11 +32,10 @@ void SceneTitle::draw()
 {
 	SetFontSize(64);
 
-	DrawString(m_textPosX-110, m_textPosY-100, "R E N D A", GetColor(255, 255, 255));
+	DrawString(m_textPosX-105, m_textPosY-100, "R E N D A", GetColor(255, 255, 255));
 	
 	SetFontSize(32);
 
 	DrawString(m_textPosX-150, m_textPosY - 20, "Å`òAë≈ÅBÇΩÇæÇªÇÍÇæÇØÅ`", GetColor(255, 255, 255));
 	DrawString(m_textPosX-50, m_textPosY +50, "Pless <Å™>", GetColor(255, 255, 255));
-
 }
