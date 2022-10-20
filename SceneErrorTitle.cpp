@@ -33,11 +33,10 @@ void SceneErrorTitle::draw()
 
 	SetFontSize(64);
 
-	DrawString(m_textPosX - 50, m_textPosY - 100, "ÈÄ£Êâ", GetColor(255, 0, 0));
+	DrawString(m_textPosX - 30, m_textPosY - 100, "ÈÄ£Êâ", GetColor(255, 0, 0));
 
 	SetFontSize(32);
 
 	DrawString(m_textPosX -220, m_textPosY - 20, "?ûÈ?£Êâì„?Ç„Åü„Å?„Åù„Çå„Å?„ÅëÔΩ", GetColor(255, 0, 0));
-	DrawString(m_textPosX - 70, m_textPosY + 50, "Pless UP Key", GetColor(255, 0, 0));
-
+	DrawString(m_textPosX - 60, m_textPosY + 50, "Pless UP Key", GetColor(255, 0, 0));
 }
