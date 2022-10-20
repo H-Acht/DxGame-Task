@@ -1,13 +1,8 @@
 #include "DxLib.h"
 #include "game.h"
 #include "SceneErrorMain.h"
-#include "SceneErrorTitle.h"
 #include "SceneTitle.h"
-
-namespace
-{
-
-}
+#include "SceneErrorFail.h"
 
 void SceneErrorMain::init()
 {
@@ -21,12 +16,11 @@ void SceneErrorMain::init()
 	GoalLineY = 0;
 
 	m_handle = LoadGraph("BG/te.jpg");
-	m_Phandle = LoadGraph("CC/Snails_PP.png");
+	m_Phandle = LoadGraph("CC/Snails_Sad.png");
 	m_Ehandle = LoadGraph("CC/creature.png");
 
 	m_countTimer = 0;
 	m_EcountTimer = 0;
-
 }
 
 SceneBase* SceneErrorMain::update()
@@ -69,6 +63,11 @@ SceneBase* SceneErrorMain::update()
 		DeleteGraph(m_Ehandle);
 		StopMusic();
 		return (new SceneTitle);
+	}
+
+	if (m_ePos.x + 350 >= m_pos.x)
+	{
+		return (new SceneErrorFail);
 	}
 
 	void enemy();
@@ -118,9 +117,8 @@ void SceneErrorMain::draw()
 						DrawGraph(0, 0, m_handle, true);
 						
 					}
-					DrawGraph(m_pos.x, m_pos.y, m_Phandle, TRUE);
+					DrawTurnGraph(m_pos.x, m_pos.y, m_Phandle, TRUE);
 					DrawTurnGraph(m_ePos.x, m_ePos.y, m_Ehandle, TRUE);
-
 				}
 			}
 		}
